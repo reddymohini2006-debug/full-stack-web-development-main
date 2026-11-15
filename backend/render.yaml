@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: student-management-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: oregon
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        sync: false # Set in Render Dashboard: jdbc:mysql://<host>:<port>/<dbname>?useSSL=true&allowPublicKeyRetrieval=true
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false # Set in Render Dashboard
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false # Set in Render Dashboard
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false # Set in Render Dashboard: e.g. https://student-management-frontend.vercel.app

@@ -1,0 +1,37 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Logs & Temp
+*.log
+logs/
+temp/
+tmp/
+
+# Maven & Backend
+backend/target/
+backend/.mvn/
+.m2/
+*.jar
+*.war
+
+# Node & Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# IDE & Editors
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
