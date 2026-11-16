@@ -35,3 +35,9 @@ frontend/yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+node_modules/
+**/node_modules/
+target/
+.env
+.env.*
+!.env.example
