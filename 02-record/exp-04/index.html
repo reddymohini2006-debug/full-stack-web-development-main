@@ -1,0 +1,31 @@
+ 
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Dynamic Webpage Using JavaScript</title> 
+</head> 
+<body> 
+ 
+    <h2>Dynamic Webpage</h2> 
+ 
+    <input type="text" id="name" placeholder="Enter your name"> 
+    <button onclick="displayMessage()">Click Me</button> 
+ 
+    <p id="message">Your message will appear here.</p> 
+ 
+    <script> 
+        function displayMessage() { 
+            let name = document.getElementById("name").value; 
+ 
+            if (name === "") { 
+                document.getElementById("message").innerHTML = 
+                    "Please enter your name."; 
+            } else { 
+                document.getElementById("message").innerHTML = 
+                    "Welcome, " + name + "!"; 
+            } 
+        } 
+    </script> 
+ 
+</body> 
+</html> 

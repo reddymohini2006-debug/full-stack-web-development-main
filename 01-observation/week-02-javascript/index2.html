@@ -1,0 +1,188 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>My Styled Webpage</title> 
+ 
+<style> 
+   
+/* Universal Selector */ 
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:Arial, sans-serif; 
+} 
+ 
+/* Body */ 
+body{ 
+    background:#f4f4f4; 
+} 
+ 
+/* Header */ 
+header{ 
+    background:linear-gradient(to right,#4CAF50,#2196F3); 
+    color:white; 
+    text-align:center; 
+    padding:20px; 
+    text-shadow:2px 2px 5px black; 
+} 
+ 
+/* Navigation */ 
+nav{ 
+    background:#333; 
+    padding:15px; 
+    text-align:center; 
+} 
+ 
+nav a{ 
+    color:white; 
+    text-decoration:none; 
+    margin:20px; 
+    font-size:18px; 
+} 
+ 
+nav a:hover{ 
+    color:yellow; 
+} 
+ 
+/* Canvas */ 
+canvas{ 
+   
+ 
+   
+ 
+    display:block; 
+    margin:30px auto; 
+    border:2px solid black; 
+    background:white; 
+} 
+ 
+/* Cards */ 
+.container{ 
+    display:flex; 
+    justify-content:space-around; 
+    margin:30px; 
+} 
+ 
+.card{ 
+    width:250px; 
+    background:white; 
+    padding:20px; 
+    border:2px solid gray; 
+    border-radius:15px; 
+    box-shadow:5px 5px 10px gray; 
+    text-align:center; 
+} 
+ 
+.card h3{ 
+    margin-bottom:10px; 
+} 
+ 
+/* Button */ 
+button{ 
+    margin-top:15px; 
+    padding:10px 20px; 
+    background:green; 
+    color:white; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer; 
+} 
+ 
+button:hover{ 
+    background:orange; 
+} 
+ 
+/* Footer */ 
+   
+ 
+   
+ 
+footer{ 
+    background:#333; 
+    color:white; 
+    text-align:center; 
+    padding:15px; 
+    margin-top:30px; 
+} 
+ 
+</style> 
+ 
+</head> 
+ 
+<body> 
+ 
+<header> 
+<h1>My Styled Webpage</h1> 
+</header> 
+ 
+<nav> 
+<a href="#">Home</a> 
+<a href="#">About</a> 
+<a href="#">Gallery</a> 
+<a href="#">Contact</a> 
+</nav> 
+ 
+<canvas id="myCanvas" width="500" height="250"></canvas> 
+ 
+<div class="container"> 
+ 
+<div class="card"> 
+<h3>HTML5</h3> 
+<p>HTML5 provides the structure of a webpage.</p> 
+<button>Read More</button> 
+</div> 
+ 
+<div class="card"> 
+<h3>CSS3</h3> 
+<p>CSS3 is used to style webpages beautifully.</p> 
+<button>Read More</button> 
+</div> 
+ 
+<div class="card"> 
+   
+ 
+   
+ 
+<h3>Canvas</h3> 
+<p>Canvas is used to draw graphics using JavaScript.</p> 
+<button>Read More</button> 
+</div> 
+ 
+</div> 
+ 
+<footer> 
+<p>© 2026 My Styled Webpage</p> 
+</footer> 
+ 
+<script> 
+ 
+var canvas=document.getElementById("myCanvas"); 
+var ctx=canvas.getContext("2d"); 
+ 
+// Rectangle 
+ctx.fillStyle="blue"; 
+ctx.fillRect(20,20,120,70); 
+ 
+// Circle 
+ctx.beginPath(); 
+ctx.arc(250,55,35,0,2*Math.PI); 
+ctx.fillStyle="red"; 
+ctx.fill(); 
+ 
+// Line 
+ctx.beginPath(); 
+ctx.moveTo(350,20); 
+ctx.lineTo(470,100); 
+ctx.strokeStyle="green"; 
+ctx.lineWidth=3; 
+ctx.stroke(); 
+ 
+// Name 
+ctx.font="24px Arial"; 
+ctx.fillStyle="black"; 
+ctx.fillText("Your Name",150,180); 
+ 
+</script> 
+ 
+</body> 
