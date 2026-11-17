@@ -8,7 +8,7 @@ const apiClient = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 15000, // 15 seconds timeout
+  timeout: 60000, // 60 seconds timeout
 });
 
 // Response interceptor for consistent error extraction
@@ -86,7 +86,7 @@ export const studentApi = {
   checkHealth: async () => {
     // Health check is at /health or /api/health
     const url = API_BASE_URL.endsWith('/api') ? `${API_BASE_URL}/health` : `${API_BASE_URL}/api/health`;
-    const response = await axios.get(url, { timeout: 8000 });
+    const response = await axios.get(url, { timeout: 60000 });
     return response.data;
   },
 
